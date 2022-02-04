@@ -1,0 +1,1 @@
+INSERT INTO tipocambio (monedaOrigen,monedaDestino,tipoCambio) VALUES('PEN','USD',3.98);
