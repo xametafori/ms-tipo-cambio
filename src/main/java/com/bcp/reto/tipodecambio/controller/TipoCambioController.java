@@ -14,6 +14,8 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RefreshScope
 @RestController
@@ -37,6 +39,14 @@ public class TipoCambioController {
     public Single<ResponseEntity<ResponseDto>> guardar(
             @RequestBody TipoCambioEntity dto) {
         return this.tipoCambioService.guardar(dto).subscribeOn(Schedulers.io())
+                .map(ResponseEntity::ok);
+    }
+
+    @ApiOperation(value = "Guardar el tipo de cambio")
+    @PostMapping("guardar-lista")
+    public Single<ResponseEntity<ResponseDto>> guardar(
+            @RequestBody List<TipoCambioEntity> dtoLista) {
+        return this.tipoCambioService.guardarLista(dtoLista).subscribeOn(Schedulers.io())
                 .map(ResponseEntity::ok);
     }
 }
