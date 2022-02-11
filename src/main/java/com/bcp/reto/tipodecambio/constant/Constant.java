@@ -14,6 +14,6 @@ public final class Constant {
 
     public static final Integer COD_ERR = -1;
     public static final String DATA_ERR = "ERROR";
-
+    public static final String ERROR_EXITE_DATO="El dato que se intenta persistir, ya existe";
 
 }

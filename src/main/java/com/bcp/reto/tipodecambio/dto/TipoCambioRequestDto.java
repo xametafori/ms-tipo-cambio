@@ -9,5 +9,6 @@ public class TipoCambioRequestDto {
     private BigDecimal montoDto;
     private String monedaOrigenDto;
     private String monedadDestinoDto;
+    private BigDecimal tipoCambioDto;
 
 }

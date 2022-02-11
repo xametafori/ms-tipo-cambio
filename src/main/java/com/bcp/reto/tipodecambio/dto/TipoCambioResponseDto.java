@@ -8,5 +8,4 @@ import java.math.BigDecimal;
 public class TipoCambioResponseDto extends TipoCambioRequestDto{
 
     private BigDecimal montoCambioDto;
-    private BigDecimal tipoCambioDto;
 }
